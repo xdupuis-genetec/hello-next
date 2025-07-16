@@ -4,6 +4,7 @@ import {
   readFile,
   writeFile,
 } from '../helpers/file-helpers';
+import CensorButton from './censor-button';
 
 const DATABASE_PATH = '/src/database.json';
 
@@ -35,7 +36,9 @@ function Home() {
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number {hits}</p>
+      <p>You are visitor number{' '}
+        <CensorButton>{hits}</CensorButton>
+      </p>
     </main>
   );
 }
